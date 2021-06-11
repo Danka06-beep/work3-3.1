@@ -1,20 +1,23 @@
 package com.company;
 
 class Player {
-    private Weapon[] weaponSlots;
+    public Weapon[] weaponSlots;
 
-    public  Player(){
-        weaponSlots = new Weapon[] {
+    public Player() {
+        weaponSlots = new Weapon[]{
                 new Rpg(),
                 new Pistol()
 
         };
     }
-    public int getSlotsCount(){
+
+    public int getSlotsCount() {
         return weaponSlots.length;
 
     }
-    public void shotWithWeapon(int slot){
+
+    public void shotWithWeapon(int slot) {
+
 
         Weapon weapon = weaponSlots[slot];
         weapon.shot();
